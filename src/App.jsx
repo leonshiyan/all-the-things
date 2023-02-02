@@ -3,6 +3,7 @@ import ManliestThings from './pages/ManliestThings/ManliestThings'
 import StyledThings from './pages/StyledThings/StyledThings'
 import SillyThings from './pages/SillyThings/SIllyThings'
 import Landing from './pages/Landing/Landing'
+import NiceThings from './pages/NiceThings/NiceThings'
 
 const App = () => {
   const bensThings = [
@@ -61,6 +62,13 @@ const App = () => {
       attributes: ["efficient", "reusability", "not a taco", "beautiful"],
     },
   ]
+  const yansThings = [
+    {
+      name: "Pop corn",
+      image: "https://imgs.xkcd.com/comics/health_drink_2x.png",  
+      attributes: ["sweet", "hot", "not a taco", "beautiful"],
+    },
+  ]
 
   return (
     <Routes>
@@ -77,6 +85,10 @@ const App = () => {
       <Route
         path="/the-silly-things"
         element={<SillyThings things={huntersThings} />}
+      />
+      <Route
+        path="/the-nice-things"
+        element={<NiceThings things={yansThings} />}
       />
     </Routes>
   )
